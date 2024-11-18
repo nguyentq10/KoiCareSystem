@@ -1,0 +1,40 @@
+﻿<Window x:Class="KoiCareSystem.Components.AddPond"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KoiCareSystem.Components"
+        mc:Ignorable="d"
+        Title="AddPond" Height="850" Width="800" WindowStartupLocation="CenterScreen">
+    <Grid Margin="20">
+        <StackPanel>
+            <TextBlock Text="Pond Name" Margin="0,0,0,10" FontSize="18" FontWeight="Bold"/>
+            <TextBox x:Name="PondNameTextBox" Margin="0,0,0,20" FontSize="18" Height="30"/>
+
+            <TextBlock Text="Volume" Margin="0,0,0,10" FontSize="18" FontWeight="Bold"/>
+            <TextBox x:Name="VolumeTextBox" Margin="0,0,0,20" FontSize="18" Height="30"/>
+
+            <TextBlock Text="Depth" Margin="0,0,0,10" FontSize="18" FontWeight="Bold"/>
+            <TextBox x:Name="DepthTextBox" Margin="0,0,0,20" FontSize="18" Height="30"/>
+
+            <TextBlock Text="Pumping Capacity" Margin="0,0,0,10" FontSize="18" FontWeight="Bold"/>
+            <TextBox x:Name="PumpingCapacityTextBox" Margin="0,0,0,20" FontSize="18" Height="30"/>
+
+            <TextBlock Text="Drain" Margin="0,0,0,10" FontSize="18" FontWeight="Bold"/>
+            <TextBox x:Name="DrainTextBox" Margin="0,0,0,20" FontSize="18" Height="30"/>
+
+            <TextBlock Text="Skimmer" Margin="0,0,0,10" FontSize="18" FontWeight="Bold"/>
+            <TextBox x:Name="SkimmerTextBox" Margin="0,0,0,20" FontSize="18" Height="30"/>
+
+            <TextBlock Text="Thumbnail URL" Margin="0,0,0,10" FontSize="18" FontWeight="Bold"/>
+            <TextBox x:Name="ThumbnailTextBox" Margin="0,0,0,20" FontSize="18" Height="30"/>
+
+            <TextBlock Text="Note" Margin="0,0,0,10" FontSize="18" FontWeight="Bold"/>
+            <TextBox x:Name="NoteTextBox" Margin="0,0,0,20" FontSize="18" Height="30"/>
+
+            <TextBlock x:Name="ValidationMessageTextBlock" Foreground="Red" Margin="0,0,0,20" FontSize="18"/>
+            
+            <Button Content="Add Pond" Click="AddPondButton_Click" Width="106" Height="39"/>
+        </StackPanel>
+    </Grid>
+</Window>

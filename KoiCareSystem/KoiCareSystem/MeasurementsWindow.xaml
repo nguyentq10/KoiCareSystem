@@ -1,0 +1,40 @@
+﻿<Window x:Class="KoiCareSystem.MeasurementsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KoiCareSystem"
+        mc:Ignorable="d"
+        Title="MeasurementsWindow" Height="1080" Width="1920" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
+
+    <DockPanel>
+        <local:SidebarControl x:Name="Sidebar" DockPanel.Dock="Left"/>
+        <Grid Background="#FAEEE6">
+            <TextBlock HorizontalAlignment="Center" Height="77" Margin="0,83,0,0" TextWrapping="Wrap" Text="Measurements Window" VerticalAlignment="Top" Width="613" FontSize="48" FontWeight="ExtraBlack" Foreground="#FF6D2800"/>
+            <Button x:Name="AddMea" Content="Add Measurement" Click="AddMea_Click" Style="{StaticResource ResourceKey=action}" Margin="1398,204,99,799" FontSize="24"/>
+            <DataGrid x:Name="MeansDataGrid" AutoGenerateColumns="False" Height="680" Margin="50,318,50,66" FontSize="30">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="MeasureId" Binding="{Binding MeasureId}" Width="*" FontSize="24"/>
+                    <DataGridTextColumn Header="PondId" Binding="{Binding PondId}" Width="*" FontSize="24"/>
+                    <DataGridTextColumn Header="UserId" Binding="{Binding UserId}" Width="*" FontSize="24"/>
+                    <DataGridTextColumn Header="Nitrite" Binding="{Binding Nitrite}" Width="*" FontSize="24"/>
+                    <DataGridTextColumn Header="Oxygen" Binding="{Binding Oxygen}" Width="*" FontSize="24"/>
+                    <DataGridTextColumn Header="Nitrate" Binding="{Binding Nitrate}" Width="*" FontSize="24"/>
+                    <DataGridTextColumn Header="CreatedAt" Binding="{Binding CreatedAt}" Width="*" FontSize="24"/>
+                    <DataGridTextColumn Header="Temperature" Binding="{Binding Temperature}" Width="*" FontSize="24"/>
+                    <DataGridTextColumn Header="Phosphate" Binding="{Binding Phosphate}" Width="*" FontSize="24"/>
+                    <DataGridTextColumn Header="pH" Binding="{Binding PH}" Width="*" FontSize="24"/>
+                    <DataGridTextColumn Header="Ammonium" Binding="{Binding Ammonium}" Width="*" FontSize="24"/>
+                    <DataGridTextColumn Header="Hardness" Binding="{Binding Hardness}" Width="*" FontSize="24"/>
+                    <DataGridTextColumn Header="CarbonDioxide" Binding="{Binding CarbonDioxide}" Width="*" FontSize="24"/>
+                    <DataGridTextColumn Header="CarbonHardness" Binding="{Binding CarbonHardness}" Width="*" FontSize="24"/>
+                    <DataGridTextColumn Header="Salt" Binding="{Binding Salt}" Width="*" FontSize="24"/>
+                    <DataGridTextColumn Header="TotalChlorines" Binding="{Binding TotalChlorines}" Width="*" FontSize="24"/>
+                    <DataGridTextColumn Header="OutdoorTemp" Binding="{Binding OutdoorTemp}" Width="*" FontSize="24"/>
+                    <DataGridTextColumn Header="AmountFed" Binding="{Binding AmountFed}" Width="*" FontSize="24"/>
+
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+    </DockPanel>
+</Window>

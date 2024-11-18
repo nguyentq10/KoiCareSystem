@@ -1,0 +1,39 @@
+﻿<Window x:Class="KoiCareSystem.SaltCalculatorWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KoiCareSystem"
+        mc:Ignorable="d"
+        Title="SaltCalculatorWindow" Height="1080" Width="1920" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
+
+    <DockPanel>
+        <local:SidebarControl x:Name="Sidebar" DockPanel.Dock="Left"/>
+        <Grid Background="#FAEEE6">
+            <TextBlock Text="Salt Calculator" FontSize="48" FontWeight="ExtraBlack" Foreground="#FF6D2800" Margin="0,20,0,956" HorizontalAlignment="Center"/>
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top" Height="872" Margin="0,164,0,0">
+                <TextBlock Text="Select Pond:" FontSize="32" FontWeight="Bold" Foreground="Black" Margin="0,10" Height="41" Width="673"/>
+                <ComboBox x:Name="PondComboBox" Width="592" Margin="0,10" SelectionChanged="PondComboBox_SelectionChanged" Height="38" FontSize="24">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Name}"/>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+                <TextBlock Text="Pond Volume:" FontSize="32" FontWeight="Bold" Foreground="Black" Margin="0,10" Height="41" Width="673"/>
+                <TextBlock x:Name="PondVolumeTextBlock" FontSize="24" FontWeight="Bold" Foreground="Black" Margin="0,10" Height="41" Width="673"/>
+                <TextBlock Text="Current Salt Concentration (%):" FontSize="32" FontWeight="Bold" Foreground="Black" Margin="0,10" Height="41" Width="673"/>
+                <Slider x:Name="CurrentConcentrationSlider" Minimum="0" Maximum="2" TickFrequency="0.01" IsSnapToTickEnabled="True" Width="592" ValueChanged="Slider_ValueChanged" Height="31" LargeChange="0.5"/>
+                <TextBlock x:Name="CurrentConcentrationTextBlock" FontSize="18" FontWeight="Bold" Foreground="Black" Margin="0,10" Height="41" Width="673"/>
+                <TextBlock Text="Desired Salt Concentration (%):" FontSize="32" FontWeight="Bold" Foreground="Black" Margin="0,10" Height="42" Width="673"/>
+                <Slider x:Name="DesiredConcentrationSlider" Minimum="0" Maximum="2" TickFrequency="0.01" IsSnapToTickEnabled="True" Width="592" ValueChanged="Slider_ValueChanged" Height="31"/>
+                <TextBlock x:Name="DesiredConcentrationTextBlock" FontSize="18" FontWeight="Bold" Foreground="Black" Margin="0,10" Height="41" Width="673"/>
+                <TextBlock Text="Water Change (%):" FontSize="32" FontWeight="Bold" Foreground="Black" Margin="0,10" Height="41" Width="673"/>
+                <Slider x:Name="WaterChangeSlider" Minimum="0" Maximum="100" TickFrequency="5" IsSnapToTickEnabled="True" Width="592" ValueChanged="Slider_ValueChanged" Height="31" LargeChange="25"/>
+                <TextBlock x:Name="WaterChangeTextBlock" FontSize="18" FontWeight="Bold" Foreground="Black" Margin="0,10" Height="41" Width="673"/>
+                <Line Stroke="Black" X1="0" X2="673" Y1="0" Y2="0" StrokeThickness="2" Margin="0,10" HorizontalAlignment="Center"/>
+                <TextBlock x:Name="ResultTextBlock" FontSize="28" FontWeight="Bold" Foreground="Black" Margin="20,10,20,10" TextWrapping="Wrap"/>
+            </StackPanel>
+        </Grid>
+    </DockPanel>
+</Window>

@@ -1,0 +1,35 @@
+# Ignore bin and obj folders in the main project directory
+    KoiCareSystem/bin/
+KoiCareSystem/obj/
+
+# Ignore bin and obj folders within Services and Repositories
+Services/bin/
+Services/obj/
+Repositories/bin/
+Repositories/obj/
+
+
+# Visual Studio settings and workspace files
+.vs/
+*.suo
+*.user
+*.userosscache
+
+# NuGet packages (if using package restore)
+packages/
+*.nupkg
+
+# Publish files and logs
+*.publishsettings
+*.cache
+*.log
+
+# Rider and ReSharper settings (if applicable)
+.idea/
+_ReSharper*/
+
+# Temporary files and database files
+*.dbmdl
+*.mdf
+*.ldf
+*.ndf

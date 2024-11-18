@@ -1,0 +1,46 @@
+﻿<Window x:Class="KoiCareSystem.KoiDetailWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KoiCareSystem"
+        mc:Ignorable="d"
+        Title="KoiDetailWindow" Height="1080" Width="1920" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
+    <DockPanel>
+        <local:SidebarControl x:Name="Sidebar" DockPanel.Dock="Left"/>
+        <Grid Width="1550">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="Koi Details" HorizontalAlignment="Center" FontSize="48" FontWeight="ExtraBlack" Foreground="#FF6D2800" Grid.Row="0" Grid.ColumnSpan="2" Margin="0,20,0,20"/>
+            <Image Name="KoiThumbnail" Width="500" Height="500" Margin="5,53,5,0" Grid.Row="1" Grid.Column="0" VerticalAlignment="Top"/>
+            <StackPanel Margin="90,10,10,328" Grid.Row="1" Grid.Column="1" Grid.RowSpan="3">
+                <TextBlock Text="Name:" FontWeight="Bold" Margin="10,5,0,0" FontSize="24"/>
+                <TextBlock Name="KoiName" Margin="10,0,0,0" FontSize="28"/>
+                <TextBlock Text="Age:" FontWeight="Bold" Margin="10,5,0,0" FontSize="24"/>
+                <TextBlock Name="KoiAge" Margin="10,0,0,0" FontSize="28"/>
+                <TextBlock Text="Length:" FontWeight="Bold" Margin="10,5,0,0" FontSize="24"/>
+                <TextBlock Name="KoiLength" Margin="10,0,0,0" FontSize="28"/>
+                <TextBlock Text="Weight:" FontWeight="Bold" Margin="10,5,0,0" FontSize="24"/>
+                <TextBlock Name="KoiWeight" Margin="10,0,0,0" FontSize="28"/>
+                <TextBlock Text="Color:" FontWeight="Bold" Margin="10,5,0,0" FontSize="24"/>
+                <TextBlock Name="KoiColor" Margin="10,0,0,0" FontSize="28"/>
+                <TextBlock Text="Variety:" FontWeight="Bold" Margin="10,5,0,0" FontSize="24"/>
+                <TextBlock Name="KoiVariety" Margin="10,0,0,0" FontSize="28"/>
+                <TextBlock Text="Sex:" FontWeight="Bold" Margin="10,5,0,0" FontSize="24"/>
+                <TextBlock Name="KoiSex" Margin="10,0,0,0" FontSize="28"/>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10,20,0,0" Height="62" Width="320">
+                    <Button Content="Update Koi" HorizontalAlignment="Left" Width="138" Click="UpdateKoiButton_Click" Height="38"/>
+                    <Button Content="Delete Koi" HorizontalAlignment="Left" Width="138" Click="DeleteKoiButton_Click" Height="38"/>
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+    </DockPanel>
+</Window>

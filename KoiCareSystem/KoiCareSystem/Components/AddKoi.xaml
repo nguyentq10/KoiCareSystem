@@ -1,0 +1,49 @@
+﻿<Window x:Class="KoiCareSystem.Components.AddKoi"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KoiCareSystem.Components"
+        mc:Ignorable="d"
+        Title="AddKoi" Height="1030" Width="800" WindowStartupLocation="CenterScreen">
+    <Grid Margin="20">
+        <StackPanel>
+            <TextBlock Text="Koi Name" Margin="0,0,0,10" FontSize="18" FontWeight="Bold"/>
+            <TextBox x:Name="KoiNameTextBox" Margin="0,0,0,20" FontSize="18" Height="24"/>
+
+            <TextBlock Text="Age" Margin="0,0,0,10" FontSize="18" FontWeight="Bold"/>
+            <TextBox x:Name="AgeTextBox" Margin="0,0,0,20" FontSize="18" Height="24"/>
+
+            <TextBlock Text="Length" Margin="0,0,0,10" FontSize="18" FontWeight="Bold"/>
+            <TextBox x:Name="LengthTextBox" Margin="0,0,0,20" FontSize="18" Height="24"/>
+
+            <TextBlock Text="Weight" Margin="0,0,0,10" FontSize="18" FontWeight="Bold"/>
+            <TextBox x:Name="WeightTextBox" Margin="0,0,0,20" FontSize="18" Height="24"/>
+
+            <TextBlock Text="Color" Margin="0,0,0,10" FontSize="18" FontWeight="Bold"/>
+            <TextBox x:Name="ColorTextBox" Margin="0,0,0,20" FontSize="18" Height="24"/>
+
+            <TextBlock Text="Variety" Margin="0,0,0,10" FontSize="18" FontWeight="Bold"/>
+            <TextBox x:Name="VarietyTextBox" Margin="0,0,0,20" FontSize="18" Height="24"/>
+
+            <TextBlock Text="Origin" Margin="0,0,0,10" FontSize="18" FontWeight="Bold"/>
+            <TextBox x:Name="OriginTextBox" Margin="0,0,0,20" FontSize="18" Height="24"/>
+
+            <TextBlock Text="Physique" Margin="0,0,0,10" FontSize="18" FontWeight="Bold"/>
+            <TextBox x:Name="PhysiqueTextBox" Margin="0,0,0,20" FontSize="18" Height="24"/>
+
+            <TextBlock Text="Sex" Margin="0,0,0,10" FontSize="18" FontWeight="Bold"/>
+            <TextBox x:Name="SexTextBox" Margin="0,0,0,20" FontSize="18" Height="24"/>
+
+            <TextBlock Text="Thumbnail URL" Margin="0,0,0,10" FontSize="18" FontWeight="Bold"/>
+            <TextBox x:Name="ThumbnailTextBox" Margin="0,0,0,20" FontSize="18" Height="24"/>
+
+            <TextBlock Text="Note" Margin="0,0,0,10" FontSize="18" FontWeight="Bold"/>
+            <TextBox x:Name="NoteTextBox" Margin="0,0,0,20" FontSize="18" Height="24"/>
+
+            <TextBlock x:Name="ValidationMessageTextBlock" Foreground="Red" Margin="0,0,0,20" FontSize="18"/>
+
+            <Button Content="Add Koi" Click="AddKoiButton_Click" Width="106" Height="39"/>
+        </StackPanel>
+    </Grid>
+</Window>

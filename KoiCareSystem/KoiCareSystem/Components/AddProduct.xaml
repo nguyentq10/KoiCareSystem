@@ -1,0 +1,18 @@
+﻿<Window x:Class="KoiCareSystem.Components.AddProduct"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="AddProduct" Height="600" Width="800" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <TextBlock Text="Add Product" FontSize="36" FontWeight="Bold" Margin="0,5,0,350" HorizontalAlignment="Center"/>
+        <StackPanel Margin="10,89,10,10">
+            <TextBox x:Name="NameTextBox" Text="Name" Margin="5" FontSize="24"/>
+            <TextBox x:Name="DescriptionTextBox" Text="Description" Margin="5" FontSize="24"/>
+            <TextBox x:Name="PriceTextBox" Text="Price" Margin="5" FontSize="24"/>
+            <TextBox x:Name="ThumbnailTextBox" Text="Thumbnail" Margin="5" FontSize="24"/>
+            <TextBox x:Name="ExternalUrlTextBox" Text="External URL" Margin="5" FontSize="24"/>
+            <ComboBox x:Name="CategoryComboBox" Margin="5" FontSize="24" DisplayMemberPath="Name" SelectedValuePath="CategoryId"/>
+            <CheckBox x:Name="StatusCheckBox" Content="Status" Margin="5" FontSize="24"/>
+        </StackPanel>
+        <Button Content="Add Product" Click="AddUserButton_Click" Margin="0,413,0,118" FontSize="24" HorizontalAlignment="Center" Width="180" RenderTransformOrigin="0.515,0.305"/>
+    </Grid>
+</Window>

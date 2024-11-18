@@ -1,0 +1,37 @@
+﻿<Window x:Class="KoiCareSystem.FoodCalculatorWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KoiCareSystem"
+        mc:Ignorable="d"
+        Title="FoodCalculatorWindow" Height="1080" Width="1920" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
+    <DockPanel>
+        <local:SidebarControl x:Name="Sidebar" DockPanel.Dock="Left"/>
+        <Grid Background="#FAEEE6">
+            <TextBlock Text="Koi Food Calculator" FontSize="48" FontWeight="ExtraBlack" Foreground="#FF6D2800" HorizontalAlignment="Center" Margin="0,20,0,956"/>
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Height="496" Width="828">
+                <ComboBox x:Name="PondComboBox" Width="408" Margin="10" SelectionChanged="PondComboBox_SelectionChanged" FontSize="24" Height="46" HorizontalAlignment="Center">
+                    <ComboBoxItem Content="Select a pond" IsSelected="True"/>
+                </ComboBox>
+                <TextBlock Text="Temperature (°C)" FontSize="32" FontWeight="Bold" Margin="10"/>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Height="74" Width="552">
+                    <Button Content="6-8" Width="100" Margin="5" Click="TemperatureButton_Click" FontSize="24"/>
+                    <Button Content="9-12" Width="100" Margin="5" Click="TemperatureButton_Click" FontSize="24"/>
+                    <Button Content="13-16" Width="100" Margin="5" Click="TemperatureButton_Click" FontSize="24"/>
+                    <Button Content="17-20" Width="100" Margin="5" Click="TemperatureButton_Click" FontSize="24"/>
+                    <Button Content="21-28" Width="100" Margin="5" Click="TemperatureButton_Click" FontSize="24"/>
+                </StackPanel>
+                <TextBlock Text="Growth Speed" FontSize="32" FontWeight="Bold" Margin="10"/>
+                <ComboBox x:Name="GrowthSpeedComboBox" Width="226" Margin="10" SelectionChanged="GrowthSpeedComboBox_SelectionChanged" FontSize="24" Height="48" HorizontalAlignment="Center">
+                    <ComboBoxItem Content="Low"/>
+                    <ComboBoxItem Content="Medium" IsSelected="True"/>
+                    <ComboBoxItem Content="High"/>
+                </ComboBox>
+                <Line Stroke="Black" X1="0" X2="828" Y1="0" Y2="0" StrokeThickness="2" Margin="0,10" HorizontalAlignment="Center"/>
+                <TextBlock x:Name="TotalWeightTextBlock" Text="Total Weight of Kois: 0 g" FontSize="32" FontWeight="Bold" Margin="10"/>
+                <TextBlock x:Name="FoodRequirementTextBlock" Text="Food Requirement: 0 g/day" FontSize="32" FontWeight="Bold" Margin="10"/>
+            </StackPanel>
+        </Grid>
+    </DockPanel>
+</Window>

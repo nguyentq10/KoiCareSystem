@@ -1,0 +1,31 @@
+﻿<Window x:Class="KoiCareSystem.Components.UpdateKoi"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KoiCareSystem.Components"
+        mc:Ignorable="d"
+        Title="Update Koi" Height="1030" Width="800" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <StackPanel Margin="10">
+            <TextBlock Text="Update Koi Details" FontSize="24" FontWeight="Bold" Margin="10" HorizontalAlignment="Center"/>
+            <TextBlock Text="Name:" FontSize="24" Margin="10"/>
+            <TextBox Name="NameTextBox" FontSize="24" Margin="10"/>
+            <TextBlock Text="Age:" FontSize="24" Margin="10"/>
+            <TextBox Name="AgeTextBox" FontSize="24" Margin="10"/>
+            <TextBlock Text="Length:" FontSize="24" Margin="10"/>
+            <TextBox Name="LengthTextBox" FontSize="24" Margin="10"/>
+            <TextBlock Text="Weight:" FontSize="24" Margin="10"/>
+            <TextBox Name="WeightTextBox" FontSize="24" Margin="10"/>
+            <TextBlock Text="Color:" FontSize="24" Margin="10"/>
+            <TextBox Name="ColorTextBox" FontSize="24" Margin="10"/>
+            <TextBlock Text="Variety:" FontSize="24" Margin="10"/>
+            <TextBox Name="VarietyTextBox" FontSize="24" Margin="10"/>
+            <TextBlock Text="Sex:" FontSize="24" Margin="10"/>
+            <TextBox Name="SexTextBox" FontSize="24" Margin="10"/>
+            <TextBlock Text="Thumbnail URL:" FontSize="24" Margin="10"/>
+            <TextBox Name="ThumbnailTextBox" FontSize="24" Margin="10"/>
+            <Button Content="Update" HorizontalAlignment="Center" Width="141" Click="UpdateButton_Click" Height="41"/>
+        </StackPanel>
+    </Grid>
+</Window>

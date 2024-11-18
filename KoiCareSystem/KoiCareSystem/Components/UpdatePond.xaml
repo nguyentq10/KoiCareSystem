@@ -1,0 +1,40 @@
+﻿<Window x:Class="KoiCareSystem.Components.UpdatePond"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KoiCareSystem.Components"
+        mc:Ignorable="d"
+        Title="Update Pond" Height="1040" Width="900" WindowStartupLocation="CenterScreen">
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <StackPanel Margin="10">
+            <TextBlock Text="Update Pond Details" FontSize="24" FontWeight="Bold" Margin="10" HorizontalAlignment="Center"/>
+
+            <TextBlock Text="Name:" FontSize="24" Margin="10"/>
+            <TextBox Name="NameTextBox" FontSize="24" Margin="10"/>
+
+            <TextBlock Text="Volume:" FontSize="24" Margin="10"/>
+            <TextBox Name="VolumeTextBox" FontSize="24" Margin="10"/>
+
+            <TextBlock Text="Depth:" FontSize="24" Margin="10"/>
+            <TextBox Name="DepthTextBox" FontSize="24" Margin="10"/>
+
+            <TextBlock Text="Pumping Capacity:" FontSize="24" Margin="10"/>
+            <TextBox Name="PumpingCapacityTextBox" FontSize="24" Margin="10"/>
+
+            <TextBlock Text="Drain:" FontSize="24" Margin="10"/>
+            <TextBox Name="DrainTextBox" FontSize="24" Margin="10"/>
+
+            <TextBlock Text="Skimmer:" FontSize="24" Margin="10"/>
+            <TextBox Name="SkimmerTextBox" FontSize="24" Margin="10"/>
+
+            <TextBlock Text="Note:" FontSize="24" Margin="10"/>
+            <TextBox Name="NoteTextBox" FontSize="24" Margin="10"/>
+
+            <TextBlock Text="Thumbnail:" FontSize="24" Margin="10"/>
+            <TextBox Name="ThumbnailTextBox" FontSize="24" Margin="10"/>
+
+            <Button Content="Update" FontSize="24" Margin="10" HorizontalAlignment="Right" Click="UpdateButton_Click" Height="54" Width="122"/>
+        </StackPanel>
+    </ScrollViewer>
+</Window>
